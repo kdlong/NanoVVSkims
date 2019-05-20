@@ -29,7 +29,7 @@ class DileptonProducer(Module):
         looseMuons = []
         tightMuons = []
         for muon in filter(self.muonSel, muons):
-            if muon.looseId and muon.pfRelIso03_all < 0.4:
+            if muon.tightId and muon.pfRelIso03_all < 0.4:
                 looseMuons.append(muon)
             else:
                 continue
@@ -38,7 +38,7 @@ class DileptonProducer(Module):
 
         looseElectrons = []
         tightElectrons = []
-        for electron in filter(electronSel, eletrons):
+        for electron in filter(self.electronSel, electrons):
             if electron.cutBased == 1:
                 looseElectrons.append(electron)
             else:
@@ -56,5 +56,5 @@ class DileptonProducer(Module):
 
 # define modules using the syntax 'name = lambda : constructor' to avoid having them loaded when not needed
 
-dileptonModuleConstr = lambda : dileptonProducer(electronSelection= lambda l : l.pt > 10, muonSelection= lambda l : l.pt > 10) 
+dileptonModuleConstr = lambda : DileptonProducer(electronSelection= lambda l : l.pt > 10, muonSelection= lambda l : l.pt > 10) 
  
