@@ -9,13 +9,13 @@ keepdrop_file = "%s/python/postprocessing/analysis/NanoVVSkims/Dilepton/keep_and
 crab_script = '%s/crab/crab_script.sh' % nano_dir
 
 config.section_("General")
-config.General.requestName = 'NanoPost1'
+config.General.requestName = 'NanoPostprocessing_DYDileptonTest'
 config.General.transferLogs=True
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
 config.JobType.psetName = 'PSet.py'
 config.JobType.scriptExe = crab_script 
-config.JobType.inputFiles = ['crab_script.py', haddscript, keepdrop_file] #hadd nano will not be needed once nano tools are in cmssw
+config.JobType.inputFiles = ['crab_script_dilepton.py', haddscript, keepdrop_file] #hadd nano will not be needed once nano tools are in cmssw
 config.JobType.sendPythonFolder	 = True
 config.section_("Data")
 config.Data.inputDataset = '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6_ext1-v1/NANOAODSIM'
