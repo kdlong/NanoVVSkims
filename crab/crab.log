@@ -1,0 +1,117 @@
+DEBUG 2019-05-21 11:03:40,003: 	 Executing command: 'submit'
+DEBUG 2019-05-21 11:03:40,004: 	 Could not find CRAB cache file /afs/hep.wisc.edu/home/kdlong/.crab3; creating a new one.
+DEBUG 2019-05-21 11:03:56,573: 	 Executing command: 'submit'
+DEBUG 2019-05-21 11:03:56,573: 	 Found CRAB cache file /afs/hep.wisc.edu/home/kdlong/.crab3
+DEBUG 2019-05-21 11:03:56,582: 	 Checking credentials
+DEBUG 2019-05-21 11:03:56,583: 	 Found proxy file /tmp/x509up_u4301
+DEBUG 2019-05-21 11:03:56,583: 	 Getting proxy life time left
+DEBUG 2019-05-21 11:03:56,788: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u4301 -timeleft
+ output : 38867
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-21 11:03:56,892: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u4301 -actimeleft
+ output : 38867
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-21 11:03:56,892: 	 Proxy valid for 10:47:47 hours
+INFO 2019-05-21 11:03:56,892: 	 Will use CRAB configuration file crab_cfg.py
+DEBUG 2019-05-21 11:03:56,893: 	 Loading CRAB configuration file.
+ERROR 2019-05-21 11:03:56,938: 	 Error while loading CRAB configuration:
+name 'os' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2019-05-21 11:03:56,938: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 161, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 311, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 87, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+name 'os' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2019-05-21 11:04:12,608: 	 Executing command: 'submit'
+DEBUG 2019-05-21 11:04:12,608: 	 Found CRAB cache file /afs/hep.wisc.edu/home/kdlong/.crab3
+DEBUG 2019-05-21 11:04:12,615: 	 Checking credentials
+DEBUG 2019-05-21 11:04:12,616: 	 Found proxy file /tmp/x509up_u4301
+DEBUG 2019-05-21 11:04:12,616: 	 Getting proxy life time left
+DEBUG 2019-05-21 11:04:12,720: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u4301 -timeleft
+ output : 38851
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-21 11:04:12,824: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u4301 -actimeleft
+ output : 38851
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-21 11:04:12,825: 	 Proxy valid for 10:47:31 hours
+INFO 2019-05-21 11:04:12,825: 	 Will use CRAB configuration file crab_cfg.py
+DEBUG 2019-05-21 11:04:12,825: 	 Loading CRAB configuration file.
+INFO 2019-05-21 11:04:14,734: 	 Wrong format in command-line argument '--dryrun'. Expected format is <section-name>.<parameter-name>=<parameter-value>.
+INFO 2019-05-21 11:04:14,735: 	 If the argument '--dryrun' is an option to the submit command, try 'crab submit --dryrun [value for --dryrun option (if required)] [arguments]'.
+ERROR 2019-05-21 11:04:14,735: 	 ERROR: Wrong command-line format.
+ERROR 2019-05-21 11:04:14,735: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 161, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 311, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 65, in loadConfig
+    raise ConfigurationException("ERROR: Wrong command-line format.")
+ConfigurationException: ERROR: Wrong command-line format.
+DEBUG 2019-05-21 11:04:33,206: 	 Executing command: 'submit'
+DEBUG 2019-05-21 11:04:33,206: 	 Found CRAB cache file /afs/hep.wisc.edu/home/kdlong/.crab3
+DEBUG 2019-05-21 11:04:33,213: 	 Checking credentials
+DEBUG 2019-05-21 11:04:33,213: 	 Found proxy file /tmp/x509up_u4301
+DEBUG 2019-05-21 11:04:33,213: 	 Getting proxy life time left
+DEBUG 2019-05-21 11:04:33,317: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u4301 -timeleft
+ output : 38830
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-21 11:04:33,423: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u4301 -actimeleft
+ output : 38830
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-21 11:04:33,423: 	 Proxy valid for 10:47:10 hours
+INFO 2019-05-21 11:04:33,423: 	 Will use CRAB configuration file crab_cfg.py
+DEBUG 2019-05-21 11:04:33,423: 	 Loading CRAB configuration file.
+DEBUG 2019-05-21 11:04:34,684: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2019-05-21 11:04:34,684: 	 Cannot find the file crab_script.sh specified in the JobType.scriptExe configuration parameter.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2019-05-21 11:04:34,684: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 161, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 311, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 92, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Cannot find the file crab_script.sh specified in the JobType.scriptExe configuration parameter.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
