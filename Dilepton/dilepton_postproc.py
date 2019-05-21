@@ -9,5 +9,5 @@ from dileptonModule import *
 
 testfile = os.environ["CMSSW_BASE"] + "/src/Analysis/VVAnalysis/test/9D8BBBB2-187D-CE49-9CAE-009ADB180509.root"
 
-p=PostProcessor(".",[testfile],"(nElectron+nMuon)>2","keep_and_drop.txt",[dileptonModuleConstr()],provenance=True)
+p=PostProcessor(".",[testfile],"(nElectron>1 || nMuon > 1)","keep_and_drop.txt",[dileptonModuleConstr()],provenance=True)
 p.run()

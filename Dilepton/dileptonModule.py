@@ -37,7 +37,7 @@ class DileptonProducer(Module):
         looseElectrons = []
         tightElectrons = []
         for electron in filter(self.electronSel, electrons):
-            if electron.cutBased == 1:
+            if electron.cutBased >= 1:
                 looseElectrons.append(electron)
             if electron.cutBased == 4:
                 tightElectrons.append(electron)
