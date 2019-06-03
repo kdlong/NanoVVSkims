@@ -1,0 +1,5 @@
+# Copy to local.txt and change
+[local]
+campaign: NanoAOD_DileptonSkim_$DATE
+outLFNDirBase: /store/user/$USER/NanoAOD_DileptonSkims_$DATE/
+storageSite: T2_US_Wisconsin
