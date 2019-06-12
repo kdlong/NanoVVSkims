@@ -29,9 +29,9 @@ class DileptonProducer(Module):
         looseMuons = []
         tightMuons = []
         for muon in filter(self.muonSel, muons):
-            if muon.tightId and muon.pfRelIso03_all < 0.4:
+            if muon.tightId and muon.pfRelIso04_all < 0.4:
                 looseMuons.append(muon)
-                if muon.pfRelIso03_all < 0.15:
+                if muon.pfRelIso04_all < 0.15:
                     tightMuons.append(muon)
 
         looseElectrons = []

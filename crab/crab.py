@@ -12,10 +12,10 @@ import hashlib
 #Should go in the settings file
 nano_dir = os.environ["CMSSW_BASE"] + "/src/PhysicsTools/NanoAODTools"
 analysis_dir = '%s/python/postprocessing/analysis/NanoVVSkims' % nano_dir
+dilepton_dir = '%s/Dilepton' % analysis_dir
 haddscript = "%s/scripts/haddnano.py" % nano_dir
-keepdrop_file = "%s/Dilepton/keep_and_drop.txt" % analysis_dir
-crab_dir = '%s/crab' % nano_dir
-crab_script = '%s/crab_script.py' % crab_dir
+keepdrop_file = "%s/keep_and_drop.txt" % dilepton_dir
+crab_script = '%s/crab_script.py' % dilepton_dir
 
 settingsFile = "%s/crab/CrabTemplates/local.txt" % analysis_dir
 if not os.path.exists(settingsFile):
@@ -98,10 +98,10 @@ config.General.transferOutputs = True
 config.General.transferLogs = True
 
 config.JobType.pluginName = 'Analysis'
-config.JobType.psetName = '%s/PSet.py' % crab_dir
+config.JobType.psetName = '%s/PSet.py' % dilepton_dir
 config.JobType.numCores = 1
 config.JobType.inputFiles = [crab_script, haddscript, keepdrop_file] #hadd nano will not be needed once nano tools are in cmssw
-config.JobType.scriptExe = crab_script 
+config.JobType.scriptExe = crab_script.replace("py", "sh")
 config.JobType.sendPythonFolder	 = True
 config.JobType.allowUndistributedCMSSW = True
 
