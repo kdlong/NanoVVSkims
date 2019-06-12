@@ -2,4 +2,5 @@
 [local]
 campaign: NanoAOD_DileptonSkim_$DATE
 outLFNDirBase: /store/user/$USER/NanoAOD_DileptonSkims_$DATE/
-storageSite: T2_US_Wisconsin
+#storageSite: T2_US_Wisconsin
+storageSite: T2_CH_CERN
